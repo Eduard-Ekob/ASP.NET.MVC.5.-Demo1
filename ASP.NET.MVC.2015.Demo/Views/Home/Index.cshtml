@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <a href="/Home/Add6/1/11">Using data from route data</a>
+    </div>
+    <div>
+        <div>Using data from query string (QueryStringValueProvider)</div>
+        <a href="/Home/Add6?a=11&b=12">Using data from query string</a>
+    </div>
+    <div>
+        <form action="/Home/Add7" method="POST">
+            <fieldset>
+                <legend>Using data from form (FormValueProvider)</legend>
+                <label for="a">a:</label>
+                <input type="text" name="a" id="a" />
+                <label for="b">b:</label>
+                <input type="text" name="b" id="b" />
+                <input type="submit" value="Add" />
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <form action="/Home/AddArray" method="post">
+            <fieldset>
+                <legend>Using data from form (binding array)</legend>
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <div>a[@i]:<input type="text" name="arr" id="arr" /></div>
+                    <br />
+                }
+                <div><input type="submit" /></div>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <fieldset>
+            <legend>Data from dowload file (HttpFileCollectionValueProvider)</legend>
+            <form action="/Home/UploadFile" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="file">To downloads</label>
+                    <input type="file" name="file" id="file" />
+                </div>
+                <div>
+                    <input type="submit" value="Upload" />
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>

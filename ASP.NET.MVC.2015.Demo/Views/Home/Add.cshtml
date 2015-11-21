@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <div>
+        <form action="/Home/Add6" method="post">
+            <div>a:<input type="text" name="a" id="a" /></div>
+            <br />
+            <div>b:<input type="text" name="b" id="b" /></div>
+            <br />
+            <div><input type="submit" /></div>
+        </form>
+    </div>
+    <br />
+    <div>
+        <form action="/Home/AddArray" method="post">
+            <div>a[1]:<input type="text" name="arr" id="arr" /></div>
+            <br />
+            <div>a[2]:<input type="text" name="arr" id="arr" /></div>
+            <br />
+            <div>a[3]:<input type="text" name="arr" id="arr" /></div>
+            <br />
+            <div>a[4]:<input type="text" name="arr" id="arr" /></div>
+            <br />
+            <div><input type="submit" /></div>
+        </form>
+    </div>
+    <br />
+    <div>
+        <form action="/Home/UploadFile" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="file">To downloads</label>
+                <input type="file" name="file" id="file" />
+            </div>
+            <div>
+                <input type="submit" value="Upload" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

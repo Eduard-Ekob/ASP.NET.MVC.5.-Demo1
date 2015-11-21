@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Create new entry</legend>
+            <form action="/Guestbook/CreateEntry" method="post">
+                <div>
+                    <label for="name">Enter your name</label>
+                </div>
+                <div>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <div>
+                    <label for="message">Enter your message</label>
+                </div>
+                <div>
+                    <input type="text" name="message" id="message" />
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Add" />
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
