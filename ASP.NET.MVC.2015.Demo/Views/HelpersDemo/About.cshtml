@@ -1,0 +1,14 @@
+﻿@model FormCollection
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>About</h2>
+<div>
+    <ul>
+        @foreach (var d in Model)
+        {
+            <li>@d</li>
+        }
+    </ul>
+</div>

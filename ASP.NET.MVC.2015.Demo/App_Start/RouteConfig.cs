@@ -18,7 +18,7 @@ namespace ASP.NET.MVC._2015.Demo
                 url: "{controller}/{action}/{a}/{b}",
                 defaults: new
                 {
-                    controller = "Home",
+                    controller = "RazorDemo",
                     action = "Index",
                     a = UrlParameter.Optional,
                     b = UrlParameter.Optional

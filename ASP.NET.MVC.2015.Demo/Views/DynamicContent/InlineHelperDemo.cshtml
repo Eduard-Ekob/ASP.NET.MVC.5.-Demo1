@@ -1,0 +1,32 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "InlineHelperDemo";
+    string[] numbers = { "1", "2", "3" };
+}
+
+@helper UnsortedList(IEnumerable<string> list)
+{
+    <ul>
+        @foreach (var b in list)
+        {
+            <li>@b</li>
+        }
+    </ul>
+}
+
+<h2>InlineHelperDemo</h2>
+<div>
+    Fruits
+    @UnsortedList(Model)
+</div>
+
+<div>
+    Cities
+    @UnsortedList((IEnumerable<string>)ViewBag.Cities)
+</div>
+
+<div>
+    Numbers
+    @UnsortedList(numbers)
+</div>

@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@*@section Header {
+    @foreach (string str in new[] { "Home", "List", "Edit" })
+    {
+        <div class="menu">
+            @Html.ActionLink(str, str)
+        </div>
+    }
+}*@
+
+<div>
+    <a href="/DynamicContent/PartialViewDemo">Demo partial view</a>
+</div>
+
+<div>
+    <a href="/DynamicContent/ChildActionDemo">Demo child action</a>
+</div>
+
+<div>
+    <a href="/DynamicContent/InlineHelperDemo">Demo inline helper</a>
+</div>
+
+<div>
+    <a href="/DynamicContent/CustomHelperDemo">Demo custom helper</a>
+</div>
+

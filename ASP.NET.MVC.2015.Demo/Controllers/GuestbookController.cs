@@ -76,9 +76,21 @@ namespace ASP.NET.MVC._2015.Demo.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            return View();//ViewResultBase
         }
 
+        //Паттерн POST/REDIRECT/GET
+        //Наиболее часто перенаправление используется в методах действия, которые
+        //обрабатывают запросы HTTP POST. Запросы POST используются тогда,
+        // когда нужно изменить состояние приложения.Если просто возвращать HTML
+        //после обработки запроса, существует риск того, что пользователь
+        //будет нажимать кнопку перезагрузки браузера и повторит отправку форму 
+        //во второй раз, вызывая неожиданные и нежелательные результаты.
+        //Чтобы избежать этой проблемы, можно следовать паттерну Post/Redirect/Get.
+        //В этом паттерне после получения POST запроса он обрабатывается, а затем 
+        //перенаправляет браузер так, чтобы GET запрос был сделан браузером для
+        //другого URL. GET запросы не должны изменять состояние приложения, так что 
+        //любая случайная повторная отправка этого запроса не вызовет никаких проблем.
         [HttpPost]
         //public ActionResult Create([ModelBinder(typeof(GuestbookModelBinder))]GuestbookEntry entry)
         public ActionResult Create(GuestbookEntry entry)
@@ -114,24 +126,24 @@ namespace ASP.NET.MVC._2015.Demo.Controllers
 
         }
 
-        [HttpPost]
-        public ActionResult CreateEntry()
-        {
-            try
-            {
-                var entry = new GuestbookEntry();
-                UpdateModel(entry);
-                //UpdateModel(entry, new QueryStringValueProvider(ControllerContext));
-                entry.DateAdded = DateTime.Now;
-                ctx.Entries.Add(entry);
-                ctx.SaveChanges();
-            }
-            catch (Exception)
-            {
-                Debug.WriteLine("Binding error!");
-            }
-            return RedirectToAction("Index");
-        }
+        //[HttpPost]
+        //public ActionResult CreateEntry()
+        //{
+        //    try
+        //    {
+        //        var entry = new GuestbookEntry();
+        //        UpdateModel(entry);
+        //        //UpdateModel(entry, new QueryStringValueProvider(ControllerContext));
+        //        entry.DateAdded = DateTime.Now;
+        //        ctx.Entries.Add(entry);
+        //        ctx.SaveChanges();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        Debug.WriteLine("Binding error!");
+        //    }
+        //    return RedirectToAction("Index");
+        //}
 
         [NonAction]
         public DateTime CreateDateTime()

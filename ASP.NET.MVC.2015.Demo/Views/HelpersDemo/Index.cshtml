@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+    string[] list = { "one", "two", "three" };
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("cCheckbox", "html checkbox demo")
+        @Html.CheckBox("cCheckbox", false)
+    </div>
+    <div>
+        @Html.TextArea("cTextarea", "Enter comment", 5, 15, null)
+    </div>
+    <div>
+        @Html.DropDownList("cDropdownlist", new SelectList(list))
+    </div>
+    <div>
+        @Html.Password("cPassword","1234567")
+    </div>
+    <div>
+        <input type="submit" value="Send" />
+    </div>
+}

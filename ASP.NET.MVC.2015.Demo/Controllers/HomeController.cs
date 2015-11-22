@@ -136,7 +136,7 @@ namespace ASP.NET.MVC._2015.Demo.Controllers
             }
 
             string destinationPath = Server.MapPath("/Uploads");
-            //string fileName = file.FileName;
+            fileName = file.FileName;
             string path = Path.Combine(destinationPath, fileName);
             file.SaveAs(path);
             return File(path, "image/jpeg");

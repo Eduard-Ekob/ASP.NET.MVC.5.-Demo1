@@ -128,16 +128,23 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DynamicContentController.cs" />
     <Compile Include="Controllers\GuestbookController.cs" />
+    <Compile Include="Controllers\HelpersDemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RazorDemoController.cs" />
+    <Compile Include="Controllers\ReturnResultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\BrowserValueProvider.cs" />
     <Compile Include="Infrastructure\BrowserValueProviderFactory.cs" />
     <Compile Include="Infrastructure\GuestbookModelBinder.cs" />
+    <Compile Include="Infrastructure\Helpers\CustomHelpers.cs" />
     <Compile Include="Models\GuestbookEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\HtmlResult.cs" />
+    <Compile Include="Utils\ImageResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -175,6 +182,29 @@
     <Content Include="Views\Home\Add.cshtml" />
     <Content Include="Views\Guestbook\Index.cshtml" />
     <Content Include="Views\Guestbook\Create.cshtml" />
+    <Content Include="Views\ReturnResult\Index.cshtml" />
+    <Content Include="Views\ReturnResult\ReturnView.cshtml" />
+    <Content Include="Views\ReturnResult\StrongTypeView.cshtml" />
+    <Content Include="Views\ReturnResult\ViewDemo.cshtml" />
+    <Content Include="Views\RazorDemo\Index.cshtml" />
+    <Content Include="Views\RazorDemo\PartialView.cshtml" />
+    <Content Include="Views\RazorDemo\RazorLoopsAndArrays.cshtml" />
+    <Content Include="Views\RazorDemo\RazorSyntax.cshtml" />
+    <Content Include="Views\RazorDemo\RazorVariables.cshtml" />
+    <Content Include="Views\HelpersDemo\Index.cshtml" />
+    <Content Include="Views\HelpersDemo\About.cshtml" />
+    <Content Include="Views\GuestbookNew\Create.cshtml" />
+    <Content Include="Views\GuestbookNew\Edit.cshtml" />
+    <Content Include="Views\GuestbookNew\Index.cshtml" />
+    <Content Include="Views\GuestbookNew\Search.cshtml" />
+    <Content Include="Views\DynamicContent\Index.cshtml" />
+    <Content Include="Views\DynamicContent\ChildAction.cshtml" />
+    <Content Include="Views\DynamicContent\ChildActionDemo.cshtml" />
+    <Content Include="Views\DynamicContent\CustomHelperDemo.cshtml" />
+    <Content Include="Views\DynamicContent\InlineHelperDemo.cshtml" />
+    <Content Include="Views\DynamicContent\PartialViewDemo.cshtml" />
+    <Content Include="Views\DynamicContent\_LinkPartialView.cshtml" />
+    <Content Include="Views\DynamicContent\_ViewSrtingListPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

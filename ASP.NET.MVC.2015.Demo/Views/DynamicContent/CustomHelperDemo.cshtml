@@ -1,0 +1,52 @@
+﻿@using NET.MVC._2015.Demo.Infrastructure.Helpers
+@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "CustomHelperDemo";
+    string[] numbers = { "1", "2", "3" };
+}
+
+<h4>
+    CustomHelperDemo
+</h4>
+
+<div>
+    Fruits
+    @Html.UnsortedList(Model)
+</div>
+
+<div>
+    Cities
+    @Html.UnsortedList((IEnumerable<string>)ViewBag.Cities)
+</div>
+
+<div>
+    Numbers
+    @Html.UnsortedList(numbers)
+</div>
+
+<h4>
+    Encoding (Unencoding) demo
+</h4>
+<div>
+    <b>Encoding demo</b>
+    @Html.DisplayMessageReturnMvcHtmlStringEncoding((string)ViewBag.message)
+</div>
+<div>
+    <b>Unencoding demo</b>
+    @Html.DisplayMessageReturnMvcHtmlStringUnencoding((string)ViewBag.message)
+</div>
+<div>
+    <b>Encoding demo</b>
+    @Html.DisplayMessageReturnString((string)ViewBag.message)
+</div>
+
+<div>
+    <b>Encoding demo</b>
+    @ViewBag.message
+</div>
+
+<div>
+    <b>Unencoding demo</b>
+    @Html.Raw(ViewBag.message)
+</div>

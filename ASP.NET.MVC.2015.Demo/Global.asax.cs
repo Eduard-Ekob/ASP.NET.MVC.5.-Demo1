@@ -18,6 +18,8 @@ namespace ASP.NET.MVC._2015.Demo
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //ViewEngines.Engines.Clear();
+            //var view1 = ViewEngines.Engines[1];
 
             //ValueProviderFactories.Factories.Add(new BrowserValueProviderFactory());
 
